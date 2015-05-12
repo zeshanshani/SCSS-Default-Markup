@@ -1,0 +1,44 @@
+// ==================================
+// SCSS/MODULES/_ICONS.SCSS
+// ==================================
+
+.icon {
+  background: transparent no-repeat center center;  
+  display: inline-block;
+  vertical-align: middle;
+  
+  &-headline {
+    @include clearfix;
+
+    > span {
+      vertical-align: middle;
+    }
+
+    @media (min-width: $media-medium + 1) {
+      &.right {
+        > span {
+          float: left;
+        }
+
+        > .icon {
+          float: right;
+        }
+      }
+
+      &.left {
+        > span {
+          float: right;
+        }
+
+        > .icon {
+          float: left;
+        }
+      }
+    }
+  }
+
+  &.icon-sample {
+    background-image: url(#{$path-image}/icons/sample.png);
+    @include size(91px 89px);
+  }
+}

@@ -1,0 +1,48 @@
+// ==================================
+// SCSS/MAIN.SCSS
+// ==================================
+
+// ==================================
+// All partials are imported here.
+// 
+// Author: Zeshan Ahmed 
+// URI: http://www.zeshanahmed.com/
+// ==================================
+
+//
+// Functions, Mixins, Variables
+// 
+
+@import "bourbon";
+@import "variables.scss";
+@import "mixins.scss";
+
+// 
+// Base
+// 
+
+@import "base";
+
+// 
+// Layout
+// 
+
+@import "layout";
+
+// 
+// Components
+// 
+
+@import "components";
+
+// 
+// State
+// 
+
+@import "state";
+
+// 
+// Pages
+//
+
+@import "pages";

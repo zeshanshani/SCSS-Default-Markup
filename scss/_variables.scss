@@ -1,0 +1,72 @@
+// ==================================
+// SCSS/_VARIABLES.SCSS
+// ==================================
+
+// Colors
+
+$color-prim         : #016fc7;
+$color-prim-dark    : #0077d5;
+$color-prim-light   : #055ea5;
+$color-sec          : #ff0000;
+
+$color-text-light   : #fff;
+$color-text-base    : #333333;
+$color-text-dark    : #000000;
+
+$color-link-default : $color-prim;
+$color-link-hover   : darken( $color-prim, 8% );
+
+$color-dark-bg      : $color-prim;
+
+// Font stacks
+
+$f-family-default    : Helvetica, Arial, sans-serif;
+$f-family-sans-serif : 'Lato', $f-family-default;
+$f-family-headings   : $f-family-sans-serif;
+
+// Font Sizes
+
+$f-size-base     : 16px;
+$f-size-large    : ceil(($f-size-base * 1.16));
+$f-size-small    : ceil(($f-size-base * 0.833125));
+
+// Line Heights
+
+$line-height-base      : 1.5;
+$line-height-headings  : 1.388;
+
+// Fonts Weights
+
+$f-weight-light        : 300;
+$f-weight-normal       : 400;
+$f-weight-semi-bold    : 600;
+$f-weight-bold         : 700;
+$f-weight-extra-bold   : 800;
+
+// Headings Font Sizes
+
+$f-size-h1    : 52px;
+$f-size-h2    : 42px;
+$f-size-h3    : 19px;
+$f-size-h4    : 16px;
+$f-size-h5    : 15px;
+$f-size-h6    : 14px;
+
+// Default Media Query Sizes
+
+$media-large    : 991px;
+$media-medium   : 767px;
+$media-small    : 480px;
+
+// Container Size
+
+$container-width : 1200px;
+$gutter          : 20px;
+
+// Assets Paths
+
+$path-image   : '../images';
+$path-font    : '../fonts';
+
+// Transitions
+$transition-base : '0.25s all ease-in-out';

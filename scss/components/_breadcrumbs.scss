@@ -1,0 +1,38 @@
+// ==================================
+// SCSS/MODULES/_BREADCRUMBS.SCSS
+// ==================================
+
+#breadcrumbs {
+  margin-bottom: 0;
+  
+  ul {
+    padding: 5px 11px 5px 16px;
+    display: inline-block;
+    background-color: $color-prim;
+    margin: 0;
+    list-style: none;
+    font-size: $f-size-base;
+    color: #fff;
+
+    a {
+      color: #fff;
+    }
+
+    li {
+      display: inline;
+
+      &:before {
+        content: '/';
+        margin-right: 5px;
+      }
+
+      &:first-child {
+        
+        &:before {
+          content: '';
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

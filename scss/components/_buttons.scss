@@ -1,0 +1,22 @@
+// ==================================
+// SCSS/MODULES/_BUTTONS.SCSS
+// ==================================
+
+.btn {
+  @extend %trans-ease;
+  font-weight: $f-weight-normal;
+  text-transform: uppercase;
+  color: $color-prim;
+  border: none;
+
+  &.btn-primary, &:hover {
+    background-color: $color-prim;
+    color: #fff;
+  }
+
+  &.btn-primary {
+    &:hover {
+      background-color: darken($color-prim, 7%);
+    }
+  }
+}

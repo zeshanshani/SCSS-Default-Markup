@@ -1,0 +1,176 @@
+// ==================================
+// SCSS/_MIXINS.SCSS
+// ==================================
+
+// Spacing
+// ==================================
+@mixin spacing ( $type, $multiple, $end, $direction ) {
+  $class: m;
+
+  @if $type == padding {
+    $class: p;
+  } @else {
+    $class: m;
+  }
+
+  @for $i from 1 through $end {
+    @if $direction == top {
+      .#{$class}t#{$multiple * $i} {#{$type}-top: 1px*($multiple * $i); }
+    } @else if $direction == bottom {
+      .#{$class}b#{$multiple * $i} {#{$type}-bottom: 1px*($multiple * $i); }
+    } @else if $direction == left {
+      .#{$class}l#{$multiple * $i} {#{$type}-left: 1px*($multiple * $i); }
+    } @else if $direction == right {
+      .#{$class}r#{$multiple * $i} {#{$type}-left: 1px*($multiple * $i); }
+    }
+  }
+}
+
+// Background Image
+// ==================================
+@mixin bg-img-full ( $path, $color: transparent, $repeat: no-repeat, $position: 0 0 ) {
+  background: $color url('#{$path-image}/#{$path}') $repeat $position;
+}
+
+@mixin bg-img-only ( $path ) {
+  background-image: url('#{$path-image}/#{$path}');
+}
+
+// All Colors
+// ==================================
+@mixin all-colors ( $color ) {
+  color: $color;
+
+  h1, h2, h3, h4, h5, h6, a {
+    color: $color;
+  }
+}
+
+// All Headings Colors
+// ==================================
+@mixin all-headings-colors( $color ) {
+  h1, h2, h3, h4, h5, h6, a {
+    color: $color;
+  }
+}
+
+// Rem with pixel fallback Mixin
+// ==================================
+
+@function calculate-rem ($size) {
+  $remSize: $size / 10px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size ($size) {
+  font-size: $size;
+  font-size: calculate-rem($size);
+}
+
+// Breakpoints
+// ==================================
+
+// Media Only 
+
+@mixin media ( $width, $upper: false ) {
+  @if $upper == true {
+    $level: 'min';
+    $width: $width + 1;
+  } else {
+    $level: 'max';
+    $width: $width;
+  }
+
+  @media screen and ( #{$level}-width: $width ) {
+    @content;
+  }
+}
+
+// Max Width
+
+@mixin bp-large {
+  @media screen and (max-width: $media-large) {
+    @content;
+  }
+}
+
+@mixin bp-medium {
+  @media screen and (max-width: $media-medium) {
+    @content;
+  }
+}
+
+@mixin bp-small {
+  @media screen and (max-width: $media-small) {
+    @content;
+  }
+}
+
+// Min Width
+
+@mixin bp-large-min {
+  @media screen and (max-width: $media-large + 1) {
+    @content;
+  }
+}
+
+@mixin bp-medium-min {
+  @media screen and (max-width: $media-medium + 1) {
+    @content;
+  }
+}
+
+@mixin bp-small-min {
+  @media screen and (max-width: $media-small + 1) {
+    @content;
+  }
+}
+
+// Opacity
+// ==================================
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+// Vertically Centered
+// ==================================
+
+// 
+// $height: is must, add fixed height
+// $selector: is optional, add child selector to 
+//            assign "vertical-align: middle;"
+//            
+
+@mixin vertical-center( $height, $selector: null ) {
+  display: block;
+  height: $height;
+
+  @if $selector != null {
+    #{$selector} {
+      vertical-align: middle;
+    }
+  }
+
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+}
+
+// Positioned Element
+// ==================================
+
+@mixin positioned ( $position: 'absolute', $width: 100%, $height: 100%, $top: null, $right: null, $bottom: null, $left: null ) {
+  position: $position;
+  width: $width;
+  height: $height;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}

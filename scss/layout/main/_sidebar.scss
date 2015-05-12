@@ -1,0 +1,9 @@
+// ==================================
+// SCSS/LAYOUT/MAIN/_SIDEBAR.SCSS
+// ==================================
+
+#sidebar {
+  @extend %resp-base-no-float;
+  width: 28%;
+  float: left;
+}

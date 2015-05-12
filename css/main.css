@@ -1,0 +1,104 @@
+@charset "UTF-8";
+/* Defaults */
+img { max-width: 100%; }
+
+p { margin-bottom: 25px; }
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-weight: 600; color: #ef5827; line-height: 1.388; text-transform: uppercase; }
+
+h1, .h1 { font-size: 52px; font-size: 5.2rem; }
+
+h2, .h2 { font-size: 42px; font-size: 4.2rem; }
+
+h3, .h3 { font-size: 19px; font-size: 1.9rem; }
+
+h4, .h4 { font-size: 16px; font-size: 1.6rem; }
+
+h5, .h5 { font-size: 15px; font-size: 1.5rem; }
+
+h6, h6 { font-size: 14px; font-size: 1.4rem; }
+
+iframe { max-width: 100%; max-height: 100%; vertical-align: top; }
+
+blockquote { border: none; padding: 0; font-style: italic; background-color: transparent; font-weight: 600; color: #ef5827; font-size: 22px; }
+blockquote:before { content: '“'; }
+blockquote:after { content: '”'; }
+
+a img { -webkit-transition: 0.25s all ease-in-out; transition: 0.25s all ease-in-out; }
+a:hover img { opacity: 0.85; }
+
+/* Containers */
+.container-fluid.max { max-width: 970px; }
+
+/* HEADER */
+/* BANNER */
+/* MAIN */
+.section { padding-top: 40px; padding-bottom: 40px; }
+.section.lead { margin-bottom: 0; }
+
+/* FOOTER */
+.container-fluid.max { *zoom: 1; }
+.container-fluid.max:before, .container-fluid.max:after { content: " "; display: table; }
+.container-fluid.max:after { clear: both; }
+
+/* Components */
+.icon { background: transparent no-repeat center center; display: inline-block; vertical-align: middle; }
+.icon-headline::after { clear: both; content: ""; display: table; }
+.icon-headline > span { vertical-align: middle; }
+@media (min-width: 768px) { .icon-headline.right > span { float: left; }
+  .icon-headline.right > .icon { float: right; }
+  .icon-headline.left > span { float: right; }
+  .icon-headline.left > .icon { float: left; } }
+.icon.icon-sample { background-image: url(../images/icons/sample.png); height: 89px; width: 91px; }
+
+.bg-image, .bg-dark { background: #000000; }
+
+.bg-image { background: transparent no-repeat 50% 50%; background-size: cover; }
+
+.bg-primary { background-color: #ef5827; color: #fff; }
+
+.bg-gray { background-color: #eee; }
+
+.bg-primary h1, .bg-primary h2, .bg-primary h3, .bg-primary h4, .bg-primary h5, .bg-primary h6, .bg-primary .h1, .bg-primary .h2, .bg-primary .h3, .bg-primary .h4, .bg-primary .h5, .bg-primary .h6, .bg-dark h1, .bg-dark h2, .bg-dark h3, .bg-dark h4, .bg-dark h5, .bg-dark h6, .bg-dark .h1, .bg-dark .h2, .bg-dark .h3, .bg-dark .h4, .bg-dark .h5, .bg-dark .h6 { color: #fff; }
+
+.btn { font-weight: 400; text-transform: uppercase; color: #ef5827; border: none; -webkit-transition: 0.25s all ease-in-out; transition: 0.25s all ease-in-out; }
+.btn.btn-primary, .btn:hover { background-color: #ef5827; color: #fff; }
+.btn.btn-primary:hover { background-color: #e24411; }
+
+.social { list-style: none; margin: 0 0 10px; padding: 0; }
+.social::after { clear: both; content: ""; display: table; }
+.social li { float: left; margin-left: 10px; }
+.social li:first-child { margin-left: 0; }
+.social a { width: 34px; height: 34px; text-align: left; text-indent: -99999px; display: block; background: url(../images/icons/social.png) no-repeat 0 0; -webkit-transition: 0.25s opacity ease-in-out; transition: 0.25s opacity ease-in-out; }
+.social a:hover { opacity: 0.8; }
+.social .facebook a { background-position: 0 0; }
+.social .twitter a { background-position: -44px 0; }
+.social .pinterest a { background-position: -85px 0; }
+.social .youtube a { background-position: -127px 0; }
+.social .google-plus a { background-position: -171px 0; }
+.social .linkedin a { background-position: -215px 0; }
+
+.alignright { float: right; margin: 0 0 25px 35px; }
+
+.alignleft { float: left; margin: 0 35px 25px 0; }
+
+.mbn { margin-bottom: 0 !important; }
+
+.mtn { margin-top: 0 !important; }
+
+.man { margin: 0 !important; }
+
+hr.hr { border: none; width: 100%; height: 1px; }
+hr.hr.dark { background-color: #ef5827; }
+hr.hr.h10 { height: 10px; }
+
+#breadcrumbs { margin-bottom: 0; }
+#breadcrumbs ul { padding: 5px 11px 5px 16px; display: inline-block; background-color: #ef5827; margin: 0; list-style: none; font-size: 16px; color: #fff; }
+#breadcrumbs ul a { color: #fff; }
+#breadcrumbs ul li { display: inline; }
+#breadcrumbs ul li:before { content: '/'; margin-right: 5px; }
+#breadcrumbs ul li:first-child:before { content: ''; margin-right: 0; }
+
+/* States */
+@media (max-width: 767px) { .alignleft, .alignright { margin-left: 0 !important; margin-right: 0 !important; float: none; } }
+/* Pages */

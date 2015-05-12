@@ -1,0 +1,11 @@
+// ==================================
+// SCSS/LAYOUT/MAIN/_CONTENT.SCSS
+// ==================================
+
+#content {
+  @extend %resp-base-no-float;
+  @extend %resp-base-no-padding-right;
+  padding-right: 40px;
+  width: 72%;
+  float: left;
+}

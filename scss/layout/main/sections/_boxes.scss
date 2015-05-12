@@ -1,0 +1,11 @@
+// ======================================
+// SCSS/LAYOUT/MAIN/SECTIONS/BOXES.SCSS
+// ======================================
+
+.boxes {
+  @extend %row-margin;
+
+  .box {
+    @extend %row-padding; 
+  }
+}
