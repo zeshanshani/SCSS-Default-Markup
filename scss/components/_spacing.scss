@@ -15,16 +15,12 @@
 }
 
 // HR
-hr.hr {
+hr {
   border: none;
   width: 100%;
   height: 1px;
 
-  &.dark {
+  &.primary {
     background-color: $color-prim;
-  }
-
-  &.h10 {
-    height: 10px;
   }
 }
