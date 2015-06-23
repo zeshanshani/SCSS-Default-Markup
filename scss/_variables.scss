@@ -4,53 +4,66 @@
 
 // Colors
 
-$color-prim         : #016fc7;
-$color-prim-dark    : #0077d5;
-$color-prim-light   : #055ea5;
-$color-sec          : #ff0000;
+$black      : #000000;
+$white      : #ffffff;
 
-$color-text-light   : #fff;
-$color-text-base    : #333333;
-$color-text-dark    : #000000;
+$color-prim         : #30a0e6;
+$color-sec          : #fab837;
+$color-light        : #edf6ff;
+
+$color-text-light   : #667380;
+$color-text-base    : #4a687e;
+$color-text-dark    : #3d4959;
+$color-text-black   : #3c3b3b;
 
 $color-link-default : $color-prim;
 $color-link-hover   : darken( $color-prim, 8% );
 
+// Backgrounds
 $color-dark-bg      : $color-prim;
+$color-sec-bg       : $color-sec;
+$color-light-bg     : $color-light;
+
+$color-dark-bg-text : $white;
 
 // Font stacks
 
 $f-family-default    : Helvetica, Arial, sans-serif;
-$f-family-sans-serif : 'Lato', $f-family-default;
+$f-family-sans-serif : 'Raleway', $f-family-default;
 $f-family-headings   : $f-family-sans-serif;
 
 // Font Sizes
 
-$f-size-base     : 16px;
-$f-size-large    : ceil(($f-size-base * 1.16));
-$f-size-small    : ceil(($f-size-base * 0.833125));
+$f-size-base     : 18px;
+$f-size-large    : ceil(($f-size-base * 1.111111));
+$f-size-small    : ceil(($f-size-base * 0.888888));
 
 // Line Heights
 
-$line-height-base      : 1.5;
-$line-height-headings  : 1.388;
+$line-height-base      : 1.666;
+$line-height-headings  : 1.5;
 
 // Fonts Weights
 
+$f-weight-thin         : 100;
+$f-weight-extra-light  : 200;
 $f-weight-light        : 300;
 $f-weight-normal       : 400;
-$f-weight-semi-bold    : 600;
+$f-weight-medium       : 500;
 $f-weight-bold         : 700;
-$f-weight-extra-bold   : 800;
 
-// Headings Font Sizes
+// Font Sizes
 
-$f-size-h1    : 52px;
-$f-size-h2    : 42px;
-$f-size-h3    : 19px;
-$f-size-h4    : 16px;
+$f-size-h1    : 110px;
+$f-size-h2    : 58px;
+$f-size-h3    : 24px;
+$f-size-h4    : 22px;
 $f-size-h5    : 15px;
 $f-size-h6    : 14px;
+
+$f-size-sec-desc       : 26px;
+$f-size-sec-desc-large : 30px;
+$f-size-sec-desc-small : 22px;
 
 // Default Media Query Sizes
 
@@ -67,6 +80,10 @@ $gutter          : 20px;
 
 $path-image   : '../images';
 $path-font    : '../fonts';
+
+// Border Radius
+
+$border-radius-base : 50em;
 
 // Transitions
 $transition-base : '0.25s all ease-in-out';
