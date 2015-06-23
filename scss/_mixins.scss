@@ -162,15 +162,33 @@
   }
 }
 
-// Positioned Element
+// Position
 // ==================================
 
-@mixin positioned ( $position: 'absolute', $width: 100%, $height: 100%, $top: null, $right: null, $bottom: null, $left: null ) {
-  position: $position;
+@mixin position ( $position: 'absolute', $width: null, $height: null, $top: null, $right: null, $bottom: null, $left: null ) {
+  position: #{$position};
   width: $width;
   height: $height;
   top: $top;
   right: $right;
   bottom: $bottom;
   left: $left;
+}
+
+// Position
+// ==================================
+
+@mixin background ( $color: null, $repeat: null, $size: null, $attachment: null ) {
+  background-color: $color;
+  background-repeat: #{$repeat};
+  background-size: #{$size};
+  background-attachment: #{$attachment};
+}
+
+// Background Opacity
+// ==================================
+
+@mixin background-opacity ( $color, $opacity: 0.85 ) {
+  background-color: $color;
+  background-color: rgba($color, $opacity);
 }
