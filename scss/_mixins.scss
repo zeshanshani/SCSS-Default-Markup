@@ -193,3 +193,28 @@
   background-color: $color;
   background-color: rgba($color, $opacity);
 }
+
+// Auto Center Vertically
+// ==================================
+
+// 
+// Only add Width and Height of the element.
+// Set $size-add to true if you want to generate width and height of the element
+// Set $position to true if you want to generate vertical positioning
+// It will position the element vertically centered
+// 
+// After that, add a class of "pos-mid" to the element to center it vertically
+// 
+
+@mixin icon-pos-ver-center( $width, $height, $size-add: false, $position: false ) {
+  @if $size-add == true {
+    @include size($width $height);
+  }
+
+  @if $position == true {
+    &.pos-mid {
+      top: 50%;
+      margin-top: - ceil(( $height / 2 ));
+    }
+  }
+}
