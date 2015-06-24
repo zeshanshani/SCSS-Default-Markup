@@ -178,11 +178,12 @@
 // Position
 // ==================================
 
-@mixin background ( $color: null, $repeat: null, $size: null, $attachment: null ) {
+@mixin background ( $color: null, $repeat: null, $size: null, $attachment: null, $position: null ) {
   background-color: $color;
   background-repeat: #{$repeat};
   background-size: #{$size};
   background-attachment: #{$attachment};
+  background-position: $position;
 }
 
 // Background Opacity
