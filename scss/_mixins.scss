@@ -2,8 +2,36 @@
 // SCSS/_MIXINS.SCSS
 // ==================================
 
+// ==================================
+// Table of Contents
+// 
+// 01) Spacing
+// 02) Background Image
+//   i) Background Image Full
+//   ii) Background Image Only
+// 03) All Colors
+// 04) All Heading Colors
+// 05) Breakpoints
+// 06) Opacity
+// 07) Vertically Centered
+// 08) Position
+// 09) Background Position
+// 10) Auto Center Vertically
+// 
+// ==================================
+
 // Spacing
 // ==================================
+
+// 
+// Creates spacing classes for paddings and margins
+// 
+// $type      = padding, margin
+// $multiple  = 1, 2, 5, 10... ; e.g. mt5, mt10, mt15...
+// $end       = 10, 20, 50... ; Number of times loop runs.
+// $direction = top, right, bottom, left ; set the direction
+// 
+
 @mixin spacing ( $type, $multiple, $end, $direction ) {
   $class: m;
 
@@ -28,6 +56,12 @@
 
 // Background Image
 // ==================================
+
+// 
+// $path-image variable should be in your _variables.scss file, e.g. 
+// $path-image: '../images'
+// 
+
 @mixin bg-img-full ( $path, $color: transparent, $repeat: no-repeat, $position: 0 0 ) {
   background: $color url('#{$path-image}/#{$path}') $repeat $position;
 }
@@ -38,6 +72,12 @@
 
 // All Colors
 // ==================================
+
+// 
+// Replace all text color inside an element. 
+// Useful to use on dark background to achieve light text color
+// 
+
 @mixin all-colors ( $color ) {
   color: $color;
 
@@ -48,8 +88,14 @@
 
 // All Headings Colors
 // ==================================
+
+// 
+// Replace all headings color inside an element. 
+// Useful to use on dark background to achieve light headings color
+// 
+
 @mixin all-headings-colors( $color ) {
-  h1, h2, h3, h4, h5, h6, a {
+  h1, h2, h3, h4, h5, h6 {
     color: $color;
   }
 }
@@ -58,8 +104,8 @@
 // ==================================
 
 @function calculate-rem ($size) {
-  $remSize: $size / 10px;
-  @return $remSize * 1rem;
+  $rem-size: $size / 10px;
+  @return $rem-size * 1rem;
 }
 
 @mixin font-size ($size) {
@@ -73,11 +119,12 @@
 // Media Only 
 
 @mixin media ( $width, $upper: false ) {
+  $level: 'max';
+
   @if $upper == true {
     $level: 'min';
     $width: $width + 1;
-  } else {
-    $level: 'max';
+  } @else {
     $width: $width;
   }
 
@@ -87,6 +134,13 @@
 }
 
 // Max Width
+
+// 
+// Default following variables in your _variabls.scss file:
+// $media-large: 992px;
+// $media-medium: 767px;
+// $media-small: 480px;
+// 
 
 @mixin bp-large {
   @media screen and (max-width: $media-large) {
@@ -109,19 +163,19 @@
 // Min Width
 
 @mixin bp-large-min {
-  @media screen and (max-width: $media-large + 1) {
+  @media screen and (min-width: $media-large + 1) {
     @content;
   }
 }
 
 @mixin bp-medium-min {
-  @media screen and (max-width: $media-medium + 1) {
+  @media screen and (min-width: $media-medium + 1) {
     @content;
   }
 }
 
 @mixin bp-small-min {
-  @media screen and (max-width: $media-small + 1) {
+  @media screen and (min-width: $media-small + 1) {
     @content;
   }
 }
@@ -139,9 +193,8 @@
 // ==================================
 
 // 
-// $height: is must, add fixed height
-// $selector: is optional, add child selector to 
-//            assign "vertical-align: middle;"
+// $height: add fixed height (must)
+// $selector: add child selector to assign "vertical-align: middle;" (optional)
 //            
 
 @mixin vertical-center( $height, $selector: null ) {
@@ -175,7 +228,7 @@
   left: $left;
 }
 
-// Position
+// Background Position
 // ==================================
 
 @mixin background ( $color: null, $repeat: null, $size: null, $attachment: null, $position: null ) {
@@ -197,6 +250,8 @@
 // Auto Center Vertically
 // ==================================
 
+// 
+// The element should have position: absolute/fixed
 // 
 // Only add Width and Height of the element.
 // Set $size-add to true if you want to generate width and height of the element
