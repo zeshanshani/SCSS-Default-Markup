@@ -5,16 +5,23 @@
 /* States */
 @import "state/extends";
 
+// Above 992
 @include bp-large-min {
 
 }
 
+// Above 768
 @include bp-medium-min {
-  
+
 }
 
-@include bp-medium {
+// Below 991
+@include bp-large {
 
+}
+
+// Below 767
+@include bp-medium {
   .alignleft, .alignright {
     margin-left: 0 !important;
     margin-right: 0 !important;
@@ -22,6 +29,7 @@
   }
 }
 
+// Below 480
 @include bp-small {
-  
+
 }
