@@ -119,17 +119,14 @@
 // Media Only 
 
 @mixin media ( $width, $upper: false ) {
-  $level: 'max';
-
   @if $upper == true {
-    $level: 'min';
-    $width: $width + 1;
+    @media screen and ( min-width: $width + 1 ) {
+      @content;
+    }
   } @else {
-    $width: $width;
-  }
-
-  @media screen and ( #{$level}-width: $width ) {
-    @content;
+    @media screen and ( max-width: $width ) {
+      @content;
+    }
   }
 }
 
