@@ -17,6 +17,7 @@
 // 08) Position
 // 09) Background Position
 // 10) Auto Center Vertically
+// 11) Pixel to Percentage
 // 
 // ==================================
 
@@ -269,4 +270,18 @@
       margin-top: - ceil(( $height / 2 ));
     }
   }
+}
+
+// Pixel to Percentage
+// ==================================
+
+// 
+// Depending on the container's width
+// Can set $container to any value, e.g. 1000px
+// And the percentage will be calculated
+// based on container's value
+// 
+
+@function per-calc( $width, $container: $container-width ) {
+  @return percentage( $width / $container );
 }
